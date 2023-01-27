@@ -34,19 +34,12 @@ public class FishingListener implements Listener {
             Item item = (Item) e.getCaught();
             ItemStack is = item.getItemStack();
             ItemMeta meta = is.getItemMeta();
-            meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', FishChoser(p)));
+            meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', main.getFishcreator().randomfishName()));
             is.setItemMeta(meta);
 
 
         }
 
-    }
-
-    public String FishChoser(Player p) {
-        ArrayList<String> list = new ArrayList<>(main.getConfig().getStringList("Fishes"));
-        Random random = new Random();
-        String chosenFish = list.get(random.nextInt(0,main.getConfig().getStringList("Fishes").size()));
-        return chosenFish;
     }
 
 }
