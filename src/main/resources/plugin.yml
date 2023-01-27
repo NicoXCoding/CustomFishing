@@ -1,0 +1,6 @@
+name: CustomFishing
+version: '${project.version}'
+main: com.nicocoding.CustomFishing
+api-version: 1.19
+authors: [ NicoCoding ]
+description: A plugin that provides custom fishes when fishing along with awesome fishing rewards 
